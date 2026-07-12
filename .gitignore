@@ -7,3 +7,4 @@ dwm.png
 *.rej
 kando/
 patches/
+.env
