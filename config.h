@@ -274,6 +274,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      spawn,          {.v = (const char*[]){"/bin/sh", "-c", "~/dharma/lock", NULL}}},
 	{ MODKEY,                       XK_w,      spawn,          {.v = (const char*[]){"/bin/sh", "-c", "dmenu_windows", NULL}}},
 	{ MODKEY,                       XK_n,      spawn,          {.v = (const char*[]){"/bin/sh", "-c", "nvide", NULL}}},
+	{ MODKEY|ShiftMask,				XK_i,	   spawn,		   {.v = (const char*[]){"/bin/sh", "-c", "[ -n \"$(warpd --hint2 --oneshot)\" ] && warpd --click 1", NULL}}},
+	{ MODKEY|ControlMask|ShiftMask,				XK_i,	   spawn,		   {.v = (const char*[]){"/bin/sh", "-c", "[ -n \"$(warpd --hint2 --oneshot)\" ] && warpd --click 3", NULL}}},
+
+	{ MODKEY|ShiftMask,				XK_o,	   spawn,		   {.v = (const char*[]){"/bin/sh", "-c", "[ -n \"$(warpd --hint --oneshot)\" ] && warpd --click 1", NULL}}},
+	{ MODKEY|ControlMask|ShiftMask,				XK_o,	   spawn,		   {.v = (const char*[]){"/bin/sh", "-c", "[ -n \"$(warpd --hint --oneshot)\" ] && warpd --click 3", NULL}}},
+
 	
 	/* Медиаклавиши */
 	{ 0,                            XF86XK_AudioPlay,        spawn, {.v = (const char*[]){"playerctl", "play-pause", NULL}} },
